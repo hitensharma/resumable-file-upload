@@ -1,0 +1,57 @@
+<h1 style="text-align: center">Resumable File Upload</h1>
+<mat-card style="width: 60vw; margin: auto">
+  <mat-card-header>
+    <mat-card-title>Upload File</mat-card-title>
+  </mat-card-header>
+  <button mat-raised-button (click)="fileSelect.click()">Select File</button
+  ><br /><br />
+  <h4>Selected File: {{ name }}</h4>
+  <input
+    type="file"
+    hidden
+    #fileSelect
+    name="largeFile"
+    (change)="onFileSelect($event)"
+  />
+
+  <button mat-raised-button (click)="resumableUpload()" color="primary">
+    Upload
+  </button>
+  <br /><br />
+  <mat-progress-spinner
+    *ngIf="uploadPercent > 0"
+    class="example-margin"
+    [color]="color"
+    [mode]="mode"
+    [value]="uploadPercent"
+  >
+  </mat-progress-spinner>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      (click)="goToLink('https://www.linkedin.com/in/hitensharma15/')"
+    >
+      <img
+        src="https://img.icons8.com/material/24/000000/linkedin.png"
+      />LinkedIn
+    </button>
+    <button
+      mat-raised-button
+      (click)="goToLink('https://github.com/hitensharma')"
+    >
+      <img src="https://img.icons8.com/material/24/000000/github.png" />GitHub
+    </button>
+    <button
+      mat-raised-button
+      (click)="goToLink('https://codepen.io/hitensharma')"
+    >
+      <img src="https://img.icons8.com/material/24/000000/codepen.png" />Codepen
+    </button>
+    <button
+      mat-raised-button
+      (click)="goToLink('https://medium.com/@hitensharma1515')"
+    >
+      <img src="https://img.icons8.com/material/24/000000/medium.png" />Medium
+    </button>
+  </mat-card-actions>
+</mat-card>

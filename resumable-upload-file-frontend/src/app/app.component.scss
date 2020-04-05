@@ -1,0 +1,21 @@
+h1 {
+  margin: 0;
+}
+mat-card {
+  margin-top: 1rem !important;
+  background-color: #f2f5f7;
+  mat-card-header {
+    mat-card-title {
+      text-align: center;
+      justify-content: center;
+    }
+  }
+  mat-card-actions {
+    text-align: center;
+    button {
+      img {
+        margin-right: 4px;
+      }
+    }
+  }
+}
